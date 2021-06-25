@@ -1,0 +1,16 @@
+
+body{
+    background-color: rgb(116, 94, 48);
+    }
+    .a{
+    font-weight: bold; font-size:26; font-family: Comic Sans MS;  color: orange; 
+    }  
+    .b{
+    font-weight: normal; font-size:22; font-family:Times New Roman;  color: gray;
+    }
+    .c{font-weight: bold; font-size:32; font-family: Arial Black;  color: yellow;
+    }
+    .d{font-weight: normal; font-size:26; font-family:Calibri;  color:mediumturquoise;
+    }
+    
+    

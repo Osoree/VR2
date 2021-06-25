@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  
+.loader-container {
+  font-size: 10px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  text-align: center;
+  border-collapse: collapse;
+  vertical-align: top;
+  margin-left: 340px;
+  margin-top: 360px
+  
+}
+.loader-2 {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  position: relative;
+  -webkit-animation: loader-2 0.03s 0.03s ease alternate infinite;
+  animation: loader-2 0.03s 0.03s ease alternate infinite;
+  margin: -20px auto 0;
+}
+
+.loader-2:after,
+.loader-2:before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: loader-2 0.031s ease alternate infinite;
+  -webkit-animation: loader-2 0.03s ease alternate infinite;
+}
+
+.loader-2:before {
+  left: -20px;
+  animation-delay: 0.03s;
+}
+
+.loader-2:after {
+  right: -20px;
+  animation-delay: 0.03s;
+}
+
+@keyframes loader-2 {
+  0% {
+    box-shadow: 0 15px 0 -15px #00b4ef;
+  }
+  100% {
+    box-shadow: 0 15px 0#00b4ef;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loader-1"></div>
+      </div>
+      <div class="loader-container">
+        <div class="loader-2"></div>
+      </div>
+      <div class="loader-container">
+        <div class="loader-3">
+          <div class="item-1"></div>
+          <div class="item-2"></div>
+          <div class="item-3"></div>
+          <div class="item-4"></div>
+          <div class="item-5"></div>
+        </div>
+      </div>
+      <div class="loader-container">
+        <div class="loader-4"></div>
+      </div>
+      <script>
+          document.ready(window.setTimeout(location.href = "https://hsbi.hse.ru/articles/virtualnaya-realnost-v-obrazovanii/", resolve, 2000));
+          $(window).load(function() {
+               window.setTimeout(window.location.href="https://hsbi.hse.ru/articles/virtualnaya-realnost-v-obrazovanii/", resolve, 2000 );
+            })
+         
+
+
+      </script>
+      
+</body>
+</html>

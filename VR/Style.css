@@ -1,0 +1,67 @@
+#help {
+    position: left;
+    left: 160px; 
+    top: 50px;
+    width: 800px; 
+    padding: 20px; 
+    background: black; 
+    border-radius: 10px;
+    border: 2px solid  yellow
+     
+}
+
+ul.nav{
+    margin-left: 0px;
+    padding-left: 0px;
+    list-style: none;
+}
+.nav li { 
+    float: left;
+}
+ul.nav a {
+    display: block;
+    width: 34em;
+    padding:1px;
+    margin: none;
+    background-color: yellow;
+    border: 1px dashed #333;
+    text-decoration: none;
+    color: black(255, 255, 255);
+    text-align: center;
+}
+ul.nav a:hover{
+    background-color: #333;
+    color: #f4f4f4;
+}
+body{
+font-family: 'Balsamiq Sans', cursive;
+
+
+color:#fff;
+background-image: url("https://webfon.top/wp-content/uploads/2018/04/dark-triangles.png");
+
+
+
+} 
+footer{
+background-color:black;
+text-align: center;
+border: 1px solid yellow;
+border-radius: 2em;
+}
+h1{
+font-family: 'Balsamiq Sans', cursive;
+color: yellow
+}
+h2{
+color:yellow
+}
+a { 
+color:green; text-decoration:none 
+}
+.gradient {
+    background: #fefcea; /* Для старых браузров */
+    background: linear-gradient(to top, #fefcea, #f1da36);
+    padding: 10px;
+    border: 1px solid #333;
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css" > 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body bgcolor="#fff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<style>
+    html, body {
+  height: 100%;
+}
+
+.b {
+  display: block;
+}
+
+.toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: #ddd;
+  margin: -20px -40px;
+  overflow: hidden;
+  box-shadow: inset 0 0 2px 1px rgba(0,0,0,.05);
+}
+
+.check {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 6;
+}
+
+  .check:checked ~ .track {
+    box-shadow: inset 0 0 0 20px #00b4ef;
+  }
+
+  .check:checked ~ .switch {
+    right: 2px;
+    left: 22px;
+    transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition-property: left, right;
+    transition-delay: .05s, 0s;
+  }
+
+.switch {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  bottom: 2px;
+  right: 22px;
+  background-color: #fff;
+  border-radius: 36px;
+  z-index: 1;
+  transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  transition-property: left, right;
+  transition-delay: 0s, .05s;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+.track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.05);
+  border-radius: 20px;
+}
+    .switch-btn {
+    display: inline-block;
+    width: 30px; 
+    height: 30px; /* высота */
+    border-radius: 19px; /* радиус скругления */
+    background: #bfbfbf; /* цвет фона */
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 300ms; /* анимация */
+}
+.switch-btn::after {
+    content: "";
+    height: 32px; /* высота кнопки */
+    width: 32px; /* ширина кнопки */
+    border-radius: 17px;
+    background: #fff; /* цвет кнопки */
+    top: 3px; /* положение кнопки по вертикали относительно основы */
+    left: 3px; /* положение кнопки по горизонтали относительно основы */
+    transition-duration: 300ms; /* анимация */
+    position: absolute;
+    z-index: 1;
+}
+.switch-on {
+    background: #118c4e;
+}
+.switch-on::after {
+    left: 37px;
+}
+
+body{background:url(/images/bg/bg-6.png)}
+
+
+.form-horizontal{
+ background: #fff;
+ padding-bottom: 40px;
+ border-radius: 15px;
+ text-align: center;
+}
+.form-horizontal .heading{
+ display: block;
+ font-size: 35px;
+ font-weight: 700;
+ padding: 35px 0;
+ border-bottom: 1px solid #f0f0f0;
+ margin-bottom: 30px;
+}
+.form-horizontal .form-group{
+ padding: 0 40px;
+ margin: 0 0 25px 0;
+ position: relative;
+}
+.form-horizontal .form-control{
+ background: #f0f0f0;
+ border: none;
+ border-radius: 20px;
+ box-shadow: none;
+ padding: 0 20px 0 45px;
+ height: 40px;
+ transition: all 0.3s ease 0s;
+}
+.form-horizontal .form-control:focus{
+ background: #e0e0e0;
+ box-shadow: none;
+ outline: 0 none;
+}
+.form-horizontal .form-group i{
+ position: absolute;
+ top: 12px;
+ left: 60px;
+ font-size: 17px;
+ color: #c8c8c8;
+ transition : all 0.5s ease 0s;
+}
+.form-horizontal .form-control:focus + i{
+ color: #00b4ef;
+}
+.form-horizontal .fa-question-circle{
+ display: inline-block;
+ position: absolute;
+ top: 12px;
+ right: 60px;
+ font-size: 20px;
+ color: #808080;
+ transition: all 0.5s ease 0s;
+}
+.form-horizontal .fa-question-circle:hover{
+ color: #000;
+}
+.form-horizontal .main-checkbox{
+ float: left;
+ width: 20px;
+ height: 20px;
+ background: #11a3fc;
+ border-radius: 50%;
+ position: relative;
+ margin: 5px 0 0 5px;
+ border: 1px solid #11a3fc;
+}
+.form-horizontal .main-checkbox label{
+ width: 20px;
+ height: 20px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ cursor: pointer;
+}
+.form-horizontal .main-checkbox label:after{
+ content: "";
+ width: 10px;
+ height: 5px;
+ position: absolute;
+ top: 5px;
+ left: 4px;
+ border: 3px solid #fff;
+ border-top: none;
+ border-right: none;
+ background: transparent;
+ opacity: 0;
+ -webkit-transform: rotate(-45deg);
+ transform: rotate(-45deg);
+}
+.form-horizontal .main-checkbox input[type=checkbox]{
+ visibility: hidden;
+}
+.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after{
+ opacity: 1;
+}
+.form-horizontal .text{
+ float: left;
+ margin-left: 7px;
+ line-height: 20px;
+ padding-top: 5px;
+ text-transform: capitalize;
+}
+.form-horizontal .btn{
+ float: right;
+ font-size: 14px;
+ color: #fff;
+ background: #00b4ef;
+ border-radius: 30px;
+ padding: 10px 25px;
+ border: none;
+ text-transform: capitalize;
+ transition: all 0.5s ease 0s;
+ 
+}
+.form-horizontal :hover{
+                background-color: #fff;
+                color: #00b4ef;}
+
+@media only screen and (max-width: 479px){
+ .form-horizontal .form-group{
+ padding: 0 25px;
+ }
+ .form-horizontal .form-group i{
+ left: 45px;
+ }
+ .form-horizontal .btn{
+ padding: 10px 20px;
+ }
+}
+ul.nav a {
+                display: block;
+              
+                padding: 10px;
+                margin: none ;
+                background-color: #00b4ef;
+                border: 2px solid rgb(34, 203, 255);
+                border-radius:20px;
+                text-decoration: none;
+                color: #fff;
+                text-align: center;
+                transition: all 0.5s ease 0s;
+ 
+            }
+            ul.nav a:hover{
+                background-color: #fff;
+                color: #00b4ef;
+            }
+            
+            button{
+                margin-top: 150px
+
+            }
+               
+      #growing {
+  transition: font-size 3s, color 2s;
+}
+
+            
+            
+          
+</style>
+
+
+
+
+    <li><a href="Статья.html">Статья</a></li> 
+    <li><a href="#footer">Контакты</a></li>
+    <li><a href="Page3.html">Источники</a></li>
+   
+</ul>
+<div class="container">
+ <div class="row">
+
+ <div class="col-md-offset-3 col-md-6">
+ <form class="form-horizontal">
+ <span class="heading">АВТОРИЗАЦИЯ</span>
+ <div class="form-group">
+ <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+ <i class="fa fa-user"></i>
+ </div>
+ <div class="form-group help">
+ <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+ <i class="fa fa-lock"></i>
+ <a href="#" class="fa fa-question-circle"></a>
+ </div>
+ <div class="form-group">
+ <div class="main-checkbox">
+ <input type="checkbox" value="none" id="checkbox1" name="check"/>
+ <label for="checkbox1"></label>
+ </div>
+ <!--<div class="toggle">
+    <input type="checkbox" class="check">
+    <b class="b switch"></b>
+    <b class="b track"></b>
+  </div>-->
+ <span class="text">Запомнить</span>
+ 
+ <button type="submit" class="btn btn-default">ВХОД</button>
+ </div>
+ </form>
+ </div>
+
+ </div>
+</div>
+<button id="growing">Нажми меня</button>
+<script>
+growing.onclick = function() {
+  this.style.fontSize = '36px';
+  this.style.color = 'red';
+};
+</script>
+
+</body>
+</html>
